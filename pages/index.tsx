@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Loader from '../components/Loader'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -9,8 +10,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
 
+      <Loader show />
       <div><h1>Hi there 🔥</h1></div>
     </div>
   )
