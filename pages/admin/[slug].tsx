@@ -25,7 +25,7 @@ function PostManager() {
 
     const { slug } = router.query
 
-    const postRef = firestore.collection("users").doc(auth.currentUser.uid).collection("posts").doc(slug)
+    const postRef = firestore.collection("users").doc(auth.currentUser.uid).collection("posts").doc(slug as string)
 
     const [post] = useDocumentData<{ title: string, username: string, slug: string }>(postRef)
 
