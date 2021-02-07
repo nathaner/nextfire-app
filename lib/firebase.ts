@@ -39,6 +39,8 @@ export function postToJSON(doc: firebase.firestore.DocumentData) {
     }
 }
 
+export const increment = firebase.firestore.FieldValue.increment
+
 export const fromMillis = firebase.firestore.Timestamp.fromMillis;
 
 export const serverTimestamp = firebase.firestore.FieldValue.serverTimestamp
