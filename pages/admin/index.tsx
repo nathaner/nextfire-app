@@ -5,7 +5,7 @@ import AuthCheck from "../../components/AuthCheck";
 import PostFeed from "../../components/PostFeed";
 import { UserContext } from "../../lib/context";
 import { auth, firestore, serverTimestamp } from "../../lib/firebase";
-import styles from "../../styles/Home.module.css"
+import styles from "../../styles/Admin.module.css"
 import kebabCase from "lodash.kebabcase"
 import { useRouter } from "next/router"
 
