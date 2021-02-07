@@ -22,3 +22,19 @@ export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 export const firestore = firebase.firestore();
 export const storage = firebase.storage();
+
+export async function getUSerWithUsername(username: string) {
+    const usersRef = firestore.collection("users");
+    const query = usersRef.where("username", "==", username).limit(1);
+
+    return (await query.get()).docs[0]
+}
+
+export function postToJSON(doc: firebase.firestore.DocumentData) {
+    const data = doc.data();
+    return {
+        ...data,
+        createdAt: data.createdAt.toMillis(),
+        updatedAt: data.createdAt.toMillis()
+    }
+}

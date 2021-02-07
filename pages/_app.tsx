@@ -6,7 +6,6 @@ import { userUserData } from '../lib/hooks'
 
 function MyApp({ Component, pageProps }) {
   const userData = userUserData();
-  console.log(userData);
   
   return (
     <UserContext.Provider value={userData}>
