@@ -38,3 +38,5 @@ export function postToJSON(doc: firebase.firestore.DocumentData) {
         updatedAt: data.createdAt.toMillis()
     }
 }
+
+export const fromMillis = firebase.firestore.Timestamp.fromMillis;
